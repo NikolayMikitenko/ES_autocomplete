@@ -152,27 +152,3 @@ print("Good bye")
 #         }
 #     }
 # )
-
-data = json.dumps(
-    {
-        "suggest": {
-            "word_suggest": {
-                "prefix": "aux",
-                "completion": {
-                    "field": "word",
-                    "size": 5,
-                    "skip_duplicates": "true",
-                    "fuzzy": {
-                        "fuzziness": "auto:1,3",
-                        "transpositions": "true",
-                        "min_length": 3,
-                        "prefix_length": 2
-                    }
-                }
-            }
-        }
-    }
-)
-r = requests.get(f'http://localhost:9200/{index}/_search', headers=headers, data=data)
-print(r.status_code)
-print(r.json())
