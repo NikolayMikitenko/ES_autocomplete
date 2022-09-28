@@ -6,7 +6,7 @@
 ## 2. Create index and add documents 
 `python create_index_load_data.py` 
  
-## 3. See syggest help 
+## 3. See suggest help 
 `python suggest.py --help`
  
 Output 
